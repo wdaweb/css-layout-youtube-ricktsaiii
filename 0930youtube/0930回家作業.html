@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "微軟正黑體";
+      font-size: 14px;
+      list-style: none;
+
+    }
+
+    /* header */
+    .header1 {
+      width: 1920px;
+      height: 70px;
+      position: fixed;
+      border-bottom: 0.3px solid #dddddd;
+      top: 0;
+      left: 0;
+      background-color: white;
+      z-index: 60;
+    }
+
+
+
+    .header1 span,
+    .header1 span:before,
+    .header1 span:after {
+      width: 25px;
+      height: 2px;
+      background: rgb(110, 110, 110);
+      content: '';
+      position: absolute;
+      display: block;
+      border-radius: 6px;
+      float: left;
+      left: 2%;
+      top: 45%;
+      cursor: pointer;
+
+    }
+
+    .header1 span::before {
+      top: -8px;
+    }
+
+    .header1 span::after {
+      top: 8px;
+    }
+
+    .youtube_logo {
+      width: 6%;
+      float: left;
+      position: absolute;
+      left: 5%;
+      top: 0%;
+      cursor: pointer;
+
+    }
+
+    .wrap {
+      margin: 20px;
+      position: relative;
+    }
+
+    .search_bar {
+      width: 500px;
+      height: 35px;
+      font-size: 1rem;
+      padding-left: 10px;
+      position: absolute;
+      justify-content: center;
+      left: 35%;
+    }
+
+    .icon2 {
+      width: 2.5%;
+      position: absolute;
+      right: 10%;
+      top: 25%;
+      cursor: pointer;
+
+    }
+
+    .icon3 {
+      width: 2%;
+      position: absolute;
+      right: 8%;
+      top: 25%;
+      cursor: pointer;
+
+    }
+
+    .icon4 {
+      position: absolute;
+      right: 2%;
+      top: 20%;
+      cursor: pointer;
+
+    }
+
+    .icon5 {
+      width: 1%;
+      position: absolute;
+      right: 35.4%;
+      top: 29%;
+      border: rgb(171, 171, 171) 1px solid;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      cursor: pointer;
+      background-color: rgb(247, 247, 247);
+    }
+
+    .icon6 {
+      width: 1.1%;
+      position: absolute;
+      right: 33%;
+      top: 25%;
+      padding: 8px;
+      border-radius: 50%;
+      background-color: rgb(247, 247, 247);
+      cursor: pointer;
+    }
+
+    .header2 {
+      height: 70px;
+      width: 87%;
+      position: fixed;
+      border-bottom: 0.3px solid #dddddd;
+      top: 70px;
+      right: 0px;
+      background: white;
+      z-index: 50;
+
+    }
+
+    .title {
+      position: absolute;
+      /* height: 70px; */
+      width: 1200px;
+      top: 30%;
+      /* display: inline-block; */
+      left: 60%;
+      transform: translateX(-50%);
+      /* padding: 20px; */
+      /* background: chartreuse; */
+    }
+
+
+    .title li {
+      /* display: inline; */
+      margin-left: 20px;
+      float: left;
+
+    }
+
+    /* .header2 li {} */
+
+
+    .title ul li a {
+      text-decoration: none;
+      display: block;
+      background-color: rgb(235, 235, 235);
+      font-size: 1rem;
+      padding: 6px 15px;
+      height: 20px;
+      border-radius: 50px;
+      /* position: absolute; */
+      text-align: center;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      transition: all .3s linear;
+      border: rgb(208, 208, 208) 1px solid;
+    }
+
+    #first {
+      color: white;
+      background: black;
+    }
+
+
+    .btn a:hover {
+      background-color: rgb(186, 186, 186);
+
+    }
+
+    /* container */
+
+    .container {
+      width: 87%;
+      position: absolute;
+      top: 140px;
+      float: right;
+      right: 0%;
+      overflow: auto;
+      background: rgb(246, 246, 246);
+    }
+
+
+
+
+    .black {
+      height: 300px;
+      width: 100%;
+      background: black;
+      position: absolute;
+      text-align: left;
+
+    }
+
+    .box {
+      width: 100%;
+      /* height: 100vh; */
+      margin-top: 350px;
+      /* position: absolute;
+      top: 500px; */
+
+    }
+
+    .box2 {
+      width: 100%;
+      margin-top: 50px;
+      /* height: 100vh; */
+      /* margin-top: 350px; */
+      /* position: absolute;
+      top: 500px; */
+
+    }
+
+    .media {
+      /* margin-top: 40px; */
+      margin-left: 20px;
+      width: 375px;
+      display: inline-block;
+      /* border: burlywood 1px solid; */
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+
+
+    .txt {
+      text-align: left;
+      margin-left: 65px;
+    }
+
+    .box .img1 {
+      width: 380px;
+    }
+
+    .box .img2 {
+      /* margin: 50px; */
+      float: left;
+      width: 50px;
+      border-radius: 50%;
+    }
+
+    .black p {
+      color: #fff;
+      width: 100px;
+      border: #fff 2px solid;
+      text-align: center;
+      padding: 8px;
+      margin-top: 80px;
+      cursor: pointer;
+
+    }
+
+    .black #text {
+      margin: 80px;
+    }
+
+    .black h1 {
+      font-size: 24px;
+      color: #fff;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 300;
+    }
+
+
+    #cover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #x {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      background: rgb(199, 199, 199);
+      position: absolute;
+      top: 2%;
+      left: 97%;
+      cursor: pointer;
+
+    }
+
+    #x span {
+      color: rgb(128, 128, 128);
+      font-size: 2rem;
+      font-weight: lighter;
+    }
+
+
+
+
+
+    /* sidebar */
+
+    .side_bar {
+      /* background: Red; */
+      width: 13%;
+      position: fixed;
+      height: calc(100vh - 70px);
+      top: 50px;
+      left: 0;
+      overflow: auto;
+    }
+
+    .side_bar hr {
+      border-top: 0.3px solid #dddddd;
+      margin-right: 20px;
+
+    }
+
+    .side_bar img {
+      width: 18px;
+      margin-top: 20px;
+    }
+
+    #login2 {
+      width: 50%;
+      cursor: pointer;
+
+    }
+
+    .side_bar_1 span {
+      margin-left: 30px;
+    }
+
+    .side_bar_1 {
+      margin: 30px;
+    }
+
+
+
+    /* .a1 {
+      font-size: 14px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .a {
+      background-repeat: no-repeat;
+      display: block;
+    }
+
+    */
+    /* 
+ */
+  </style>
+
+
+</head>
+
+<body>
+  <div class="header1">
+    <span></span>
+    <img class="youtube_logo" src="./youtube_logo.png">
+    <div class="wrap">
+      <div class="search">
+        <input class="search_bar" type="text" name="search" placeholder="搜尋">
+      </div>
+    </div>
+    <img class="icon2" src="./icon2.png">
+    <img class="icon3" src="./icon3.png">
+    <img class="icon4" src="./login.jpg">
+    <img class="icon5" src="./icon4.png">
+    <img class="icon6" src="./icon5.png">
+  </div>
+  <div class="header2">
+    <div class="title">
+      <ul>
+        <li class="btn"> <a href="#" id="first">全部</a></li>
+        <li class="btn"> <a href="#">音樂</a></li>
+        <li class="btn"><a href="#">直播中</a></li>
+        <li class="btn"><a href="#">卡通</a></li>
+        <li class="btn"><a href="#">寵物</a></li>
+        <li class="btn"><a href="#">動作冒險遊戲</a></li>
+        <li class="btn"><a href="#">最新上傳</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="side_bar">
+    <ul class="side_bar_1">
+      <li>
+        <img src="icon_a1.png">
+        <span class="a1">首頁</span>
+      </li>
+      <li>
+        <img class="a1" src="icon_a2.png">
+        <span>探索</span>
+      </li>
+      <li>
+        <img class="a1" src="icon_a3.png">
+        <span>訂閱內容</span>
+      </li>
+      <li>
+        <img src="icon_a4.png">
+        <span>媒體庫</span>
+      </li>
+      <li>
+        <img src="icon_a5.png">
+        <span>觀看紀錄</span>
+      </li>
+    </ul>
+    <hr>
+    <div class="side_bar_1">
+      <p>登入帳戶即可對影片表示喜歡、發布留言及訂閱頻道。</p>
+      <img id="login2" src="./login2.jpg">
+    </div>
+    <hr>
+    <div class="side_bar_1">
+      <h2>YOUTUBE精選</h2>
+      <ul>
+
+        <li>
+          <img src="./icon_a6.png">
+          <span>音樂</span>
+        </li>
+
+        <li>
+          <img src="./icon_a7.png">
+          <span>體育</span>
+        </li>
+
+        <li>
+          <img src="./icon_a8.png">
+          <span>遊戲</span>
+        </li>
+
+        <li>
+          <img src="./icon_a9.png">
+          <span>電影</span>
+        </li>
+
+
+        <li>
+          <img src="./icon_a10.png">
+          <span>新聞</span>
+        </li>
+        <li>
+          <img src="./icon_a11.png">
+          <span>直播</span>
+        </li>
+        <li>
+          <img src="./icon_a12.png">
+          <span>360度影片</span>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div class="side_bar_1">
+      <img src="./icon_a13.png">
+      <span>瀏覽頻道</span>
+    </div>
+    <hr>
+
+    <div class="side_bar_1">
+      <h2>更多YOUTUBE功能</h2>
+      <ul>
+        <li>
+          <img src="./icon_a14.png">
+          <span>YouTube Premium</span>
+        </li>
+        <li>
+          <img src="./icon_a15.png">
+          <span>直播</span>
+        </li>
+    </div>
+    <hr>
+    <div class="side_bar_1">
+      <p>© 2021 Google LLC</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="black">
+      <div id="text">
+        <img id="cover_logo" src="./cover_logo.jpg">
+        <h1>Music Premium播放音樂不間斷</h1>
+        <p>立即訂閱</p>
+      </div>
+      <img id="cover" src="./cover.jpg">
+      <div id="x"><span>X</span></div>
+    </div>
+
+    <div class="box">
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture2-1.png" class="img1">
+        <img src="./picture2-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>ustin Bieber - Peaches ft. Daniel Caesar</h3>
+          <p>Justin Bieber </p>
+          <p>觀看次數：4.1億次 . 7個月</p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture3-1.png" class="img1">
+        <img src="./picture3-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Ariana Grande - 7 rings (Official Video)</h3>
+          <p>Ariana Grande </p>
+          <p>觀看次數：10億次 . 2 年前 </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture4-1.jpeg" class="img1">
+        <img src="./picture4-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Adele - Easy On Me (Official Video)</h3>
+          <p>Adele </p>
+          <p>觀看次數：1.2億次 . 2 週前 </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture5-1.jpeg" class="img1">
+        <img src="./picture5-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Cardi B, - I Like It [Official Music Video]</h3>
+          <p>Cardi B </p>
+          <p>觀看次數：14億次 . 3年前 </p>
+        </div>
+      </div>
+
+
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture6-1.png" class="img1">
+        <img src="./picture6-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Post Malone - Circles</h3>
+          <p>Post Malone </p>
+          <p>觀看次數：4.1億次 . 2年前</p>
+        </div>
+      </div>
+
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture7-1.png" class="img1">
+        <img src="./picture7-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Billie Eilish - Lost Cause (Official Music Video)</h3>
+          <p>Billie Eilish </p>
+          <p>觀看次數：10億次 . 2 年前 </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture8-1.jpeg" class="img1">
+        <img src="./picture8-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Joji - SLOW DANCING IN THE DARK</h3>
+          <p>88rising </p>
+          <p>觀看次數：2.7億次 . 3 年前 </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture9-1.jpeg" class="img1">
+        <img src="./picture9-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Dua Lipa - New Rules (Official Music Video)</h3>
+          <p>Dua Lipa</p>
+          <p>觀看次數：25億次 . 4年前 </p>
+        </div>
+      </div>
+
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture2-1.png" class="img1">
+        <img src="./picture2-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>ustin Bieber - Peaches ft. Daniel Caesar</h3>
+          <p>Justin Bieber </p>
+          <p>觀看次數：4.1億次 . 7個月</p>
+        </div>
+      </div>
+
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture3-1.png" class="img1">
+        <img src="./picture3-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Ariana Grande - 7 rings (Official Video)</h3>
+          <p>Ariana Grande </p>
+          <p>觀看次數：10億次 . 2 年前 </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture4-1.jpeg" class="img1">
+        <img src="./picture4-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Adele - Easy On Me (Official Video)</h3>
+          <p>Adele </p>
+          <p>觀看次數：1.2億次 . 2 週前 </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture5-1.jpeg" class="img1">
+        <img src="./picture5-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Cardi B, - I Like It [Official Music Video]</h3>
+          <p>Cardi B </p>
+          <p>觀看次數：14億次 . 3年前 </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture6-1.png" class="img1">
+        <img src="./picture6-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>ustin Bieber - Peaches ft. Daniel Caesar</h3>
+          <p>Justin Bieber </p>
+          <p>觀看次數：4.1億次 . 7個月</p>
+        </div>
+      </div>
+
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture7-1.png" class="img1">
+        <img src="./picture7-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Ariana Grande - 7 rings (Official Video)</h3>
+          <p>Ariana Grande </p>
+          <p>觀看次數：10億次 . 2 年前 </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture8-1.jpeg" class="img1">
+        <img src="./picture8-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Adele - Easy On Me (Official Video)</h3>
+          <p>Adele </p>
+          <p>觀看次數：1.2億次 . 2 週前 </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- <span>3:05:51</span> -->
+        <img src="./picture9-1.jpeg" class="img1">
+        <img src="./picture9-2.jpeg" class="img2">
+        <div class="txt">
+          <h3>Cardi B, - I Like It [Official Music Video]</h3>
+          <p>Cardi B </p>
+          <p>觀看次數：14億次 . 3年前 </p>
+
+        </div>
+      </div>
+
+
+
+</body>
+
+</html>
